@@ -1,0 +1,258 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* <이상한 부분>
+1. 폰트 기본적인 굵기가 굵게 설정되어 있는듯
+2. 당신은 프로그래밍 전문가가 되기 위해서 이부분 글씨가 가운데로 안맞춰짐
+3. 훈련하러 가기 gogo, 공유하기가 패딩값 줘서 가운데로 설정하려 하면 글자가 아래로 내려가짐 */
+*{
+    box-sizing: border-box;
+    text-align:center
+}
+body{
+    background-color: #5B2386;
+}
+h2{
+    display: none;
+}
+
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header-h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 125px;
+}
+.header-h1 .header-clock{
+    width: 221.6px;
+    height: 225px;
+    margin: 20px 0;
+}
+.header-h1 .header-title{
+    width: 564px;
+    height: 112px;
+    position: absolute;
+ 
+
+}
+
+
+.main{
+    font-family: 'GmarketSansMedium';
+}
+.practice-clause{
+    display: flex;
+    justify-content: center;
+    margin-top: 46px;
+}
+.practice-clause .practice-p{
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    color: #f5df4d;
+}
+.definition{
+    display: flex;
+    justify-content: center;
+    margin-top: 78px;
+}
+.definition .definition-img{
+    font-size: 96px;
+    position: absolute;
+    margin-top: 13px;
+}
+.definition .definition-p{
+    color: white;
+    width: 373px;
+    height: 85px;
+    line-height: 24px;
+    font-weight: 400;
+}
+.definition .definition-p .definition-p_strong{
+    font-size: 24px;
+    font-weight: 700;
+}
+.i-will{
+    color: white;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 102px;
+}
+.i-will .i-will_first-p{
+    width: 514px;
+    height: 57px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.i-will .i-will_second-p{
+    width: 765px;
+    height: 57px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 27px;
+}
+.i-will .i-will-input{
+    width: 228px;
+    height: 57px;
+    font-size: 24px;
+    color: #BABCBE;
+    border-radius: 7px;
+    font-family: 'GmarketSansMedium';
+    border: none;
+}
+input::placeholder{
+    color: #BABCBE;
+}
+.self-question{
+    display: flex;
+    margin-top: 358px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.self-question .self-question_btn{
+    background-color: #FCEE21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    padding: 21px 49px;
+    width: 565px;
+    height: 66px;
+    font-size: 23px;
+    font-weight: 700;
+    color: #5B2386;
+    line-height: 24px;
+    font-family: 'GmarketSansMedium';
+    border: none;
+}
+.self-question .self-question_img{
+    width: 64px;
+    height: 72px;
+    margin-top: 21px;
+}
+.how-long{
+    color: white;
+    font-size: 24px;
+    margin-top: 147px;
+}
+
+.how-long .how-long_second-p{
+    margin-top: 17px;
+}
+.how-long .how-long_first-p > strong{
+    font-size: 72px;
+}
+.how-long .how-long_second-p > strong{
+    font-size: 72px;
+}
+.how-long .how-long_gogo{
+    background-color: #FCEE21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #5B2386;
+    width: 356px;
+    height: 66px;
+    line-height: 24px;
+    font-family: 'GmarketSansMedium';
+    border: none;
+}
+.how-long .how-long_share{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    width: 191px;
+    height: 66px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #5B2386;
+    font-family: 'GmarketSansMedium';
+    border: none;
+}
+.how-long .how-long_btn{
+    margin-top: 127px;
+}
+
+
+.footer .footer-section{
+    margin-bottom: 57px;
+}
+.footer .footer-section .footer-logo{
+    display: block;
+}
+.footer-section{
+    margin-top: 130px;
+}
+.footer-logo .footer-logo_img{
+    width: 125px;
+    height: 25px;
+}
+.footer-section .footer-section_copyright{
+    margin-top: 20px;
+    font-family: 'Noto Sans KR';
+    color: white;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+
+.modal{
+    width: 800px;
+    height: 800px;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.modal_figure{
+    font-family: 'OTEnjoystoriesBA';
+    padding: 76px 0 0;
+}
+.modal_figure .modal_fighting{
+    font-weight: 700;
+    font-size: 96px;
+    color: #5B2386;
+}
+.modal_figure .modal_p{
+    margin-top: 4px;
+    font-weight: 700;
+    font-size: 36px;
+    color: #5B2386;
+}
+.modal_figure .modal_img{
+    margin-top: 29px;
+}
+.modal_btn{
+    margin-top: 74px;
+    background-color: #FCEE21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    width: 508px;
+    height: 66px;
+    color: #5B2386;
+    font-weight: 700;
+    font-size: 24px;
+    border: none;
+}
