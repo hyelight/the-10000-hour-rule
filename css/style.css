@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+h2, p, button{
+    margin: initial;
+    padding: initial;
+}
+body{
+    background-color: #5B2386;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 120px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-clock{
+    width: 221.6px;
+    height: 225px;
+}
+.header-title{
+    position: absolute;
+    width: 564px;
+    height: 112px;
+}
+.main{
+    margin-top: 46px;
+}
+.practice-is-important_wrapper h2{
+    display: none;
+}
+.practice-is-important_wrapper p{
+    font-family: 'OTEnjoystoriesBA';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    color: #F5DF4D;
+}
+.quotes-and-paragraph{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 78px;
+}
+.quotes-and-paragraph p{
+    position: absolute;
+    margin: 78px 14px 0;
+    font-weight: 400;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.quotes-and-paragraph p strong{
+    font-weight: 700;
+}
+.my-resolution_wrapper{
+    margin-top: 205px;
+    font-family: 'GmarketSansMedium';
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 24px;
+}
+.my-resolution_wrapper h2{
+    display: none;
+}
+.my-resolution_wrapper .i-will-be, .how-long{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 27px;
+}
+.my-resolution_wrapper input{
+    margin: 0 17px 0;
+    font-family: 'GmarketSansMedium';
+    font-weight: 400;
+    font-size: 24px;
+    border-radius: 7px;
+    width: 228px;
+    height: 57px;
+    /* 입력창 내에 글 썼을 때 좌우 여유공간 주기 위한 padding 값 */
+    padding: 0 20px;
+}
+.my-resolution_wrapper input::placeholder{
+    text-align: center;
+    color: #BABCBE;
+    font-size: 24px;
+}
+.my-resolution_wrapper .click-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 115px;
+}
+.how-long_btn{
+    width: 565px;
+    height: 66px;
+}
+.my-resolution_wrapper .click-finger{
+   width: 64px;
+   height: 72px;
+   margin-left: 7px;
+}
+.result_wrapper{
+    margin-top: 147px;
+}
+.result_wrapper h2{
+    display: none;
+}
+.result_wrapper .result-paragraph .first, .second{
+    font-family: 'GmarketSansMedium';
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.result_wrapper .result-paragraph .first strong, .second strong{
+    font-weight: 700;
+    font-size: 72px;
+    margin: 0 12px;
+}
+.result_wrapper .gogo-share_btn{
+    margin-top: 127px;
+    display: flex;
+    justify-content: center;
+}
+.result_wrapper .gogo-share_btn .share{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    color: #5B2386;
+    font-family: 'Gmarket Sans';
+    font-weight: 700;
+    font-size: 24px;
+    border: none;
+}
+.gogo{
+    width: 356px;
+    height: 66px;
+    margin-right: 18px;
+}
+.share{
+    width: 191px;
+    height: 66px;
+    background-color: #FFFFFF;
+}
+.footer{
+    margin-top: 130px;
+    color: #FFFFFF;
+    font-family: 'Noto Sans Korean';
+}
+.weniv-logo{
+    width: 125px;
+    height: 25px;
+}
+.footer p{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 12px;
+}
+.modal_wrapper{
+    /* 이부분 margin은 모달창 위 아래 공간 마련 위해 작성 이후 수정 예정*/
+    margin: 57px 0 94px;
+    width: 800px;
+    height: 800px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+.modal_wrapper{
+    padding-top: 76px;
+}
+.modal_wrapper h2{
+    display: none;
+}
+.modal-fighting, .modal-support{
+    color: #5B2386;
+    font-family: 'OTEnjoystoriesBA';
+    font-weight: 700;
+}
+.modal-fighting{
+    font-size: 96px;
+}
+.modal-support{
+    font-size: 36px;
+}
+.support_img{
+    width: 433px;
+    height: 337px;
+    margin-top: 29px;
+}
+.modal-end_btn{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 74px;
+    width: 508px;
+    height: 66px;
+}
+/* 공통되는 부분이라 같은 클래스로 묶음 */
+.yellow-bg-and-purple-color{
+    background-color: #FCEE21;
+    color: #5B2386;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'GmarketSansMedium';
+    border: none;
+}
