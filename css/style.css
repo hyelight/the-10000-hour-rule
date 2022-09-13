@@ -71,6 +71,7 @@ body{
 }
 .quotes-and-paragraph p strong{
     font-weight: 700;
+    font-family: 'GmarketSansBold';
 }
 .my-resolution_wrapper{
     margin-top: 205px;
