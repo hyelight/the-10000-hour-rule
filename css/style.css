@@ -1,221 +1,232 @@
+:root{
+    --enjoy_font-family: 'OTEnjoystoriesBA';
+    --gmarketBold_font-family: 'GmarketSansBold';
+    --gmarketMedium_font-family: 'GmarketSansMedium';
+    --noto_font-family: 'Noto Sans KR';
+    --white_color:#FFFFFF;
+    --white_background-color: #FFFFFF;
+    --purple_color: #5B2386;
+    --purple_background-color: #5B2386;
+    --input-placeholder_color: #BABCBE;
+    --yellow_background-color: #FCEE21;
+}
+
 *{
     box-sizing: border-box;
 }
-h2, p, button{
-    margin: initial;
-    padding: initial;
-}
-body{
+html{
     background-color: #5B2386;
 }
-/* 공통되는 부분이라 같은 클래스로 묶음 */
-.yellow-bg-and-purple-color{
-    background-color: #FCEE21;
-    color: #5B2386;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 56px;
-    font-weight: 700;
-    font-size: 24px;
-    font-family: 'GmarketSansMedium';
-    border: none;
-}
-
 .container{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    margin-top: 120px;
+    /* 피그마에서 봤을 때 제일 위쪽이 125px로 값이 나와서 내용 전체를 묶은 container에 margin-top 사용 */
+    margin-top: 125px;
 }
+/* header 시작 */
 .header{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* header에 정확한 px 값을 주고 header-title에서 width: 100% 부여 */
 }
 .header-clock{
-    width: 221.6px;
-    height: 225px;
+    width: 261px;
+    height: 265px;
 }
 .header-title{
+    /* position을 줘서 시계 앞에 올라오게 함 */
     position: absolute;
-    width: 564px;
-    height: 112px;
+    width: 100%;
+    /* 따로 height 값을 주지 않아도 112px 이었고, height: auto;를 줘도 112px이 됨 */
+    height: auto;
 }
+/* main 시작 */
 .main{
+    /* 1만 시간의 법칙 header 영역과 떨어지게 하기 위함 */
     margin-top: 46px;
 }
-.practice-is-important_wrapper h2{
-    display: none;
+/* 아래 있는 resolution-section과 거리 벌리기 */
+.dfn-section{
+    margin-bottom: 8rem;
 }
-.practice-is-important_wrapper p{
-    font-family: 'OTEnjoystoriesBA';
+.dfn-section_h1{
+    color: #F5DF4D;
+    font-family: var(--enjoy_font-family);
     font-weight: 700;
     font-size: 36px;
-    line-height: 40px;
-    color: #F5DF4D;
 }
-.quotes-and-paragraph{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.dfn-section_div{
     margin-top: 78px;
-}
-.quotes-and-paragraph p{
-    position: absolute;
-    margin: 78px 14px 0;
-    font-weight: 400;
-    font-family: 'GmarketSansMedium';
-    font-size: 24px;
-    color: #FFFFFF;
-}
-.quotes-and-paragraph p strong{
-    font-weight: 700;
-    font-family: 'GmarketSansBold';
-}
-.my-resolution_wrapper{
-    margin-top: 205px;
-    font-family: 'GmarketSansMedium';
-    color: #FFFFFF;
-    font-weight: 400;
-    font-size: 24px;
-}
-.my-resolution_wrapper h2{
-    display: none;
-}
-.my-resolution_wrapper .i-will-be, .how-long{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 27px;
 }
-.my-resolution_wrapper input{
-    margin: 0 17px 0;
-    font-family: 'GmarketSansMedium';
+.quotes-img{
+    /* 1만 시간의 법칙 정의보다 13px 내려와 있음 */
+    margin-top: 13px;
+}
+.dfn-10000hours{
+    /* 여기도 header와 마찬가지 */
+    position: absolute;
+    color: var(--white_color);
+    font-family: var(--gmarketMedium_font-family);
+    font-size: 18px;
+    font-weight: 400;
+    /* line-height은 px로 하지 말기 */
+    line-height: 1.7;
+    /* 이 부분 width 고정값이 아닌 유동적으로 하고 싶은데 어떻게? [???]*/
+    width: 380px;
+    /* 텍스트가 추가될 경우 줄바꿈 되도록 하지만 현재 이게 없어도 줄바꿈은 가능*/
+    overflow-wrap: break-word;
+}
+.dfn-10000hours > strong{
+    font-family: var(--gmarketBold_font-family);
+    font-size: 24px;
+    font-weight: 700;
+}
+/* .hidden을 사용하여 웹 접근성을 위해 clip-path를 이용하여 숨긴 것*/
+/* 공통되는 곳 같은 클래스 사용 */
+.hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+/* resolution 문장 공통 요소 클래스 묶어줌 */
+.resolution-p{
+    color: var(--white_color);
+    font-family: var(--gmarketMedium_font-family);
     font-weight: 400;
     font-size: 24px;
+    /* 임의로 설정함 [???]*/
+    line-height: 3;
+}
+/* input 공통 요소 클래스 묶어줌 */
+.resolution-p input{
     border-radius: 7px;
-    width: 228px;
-    height: 57px;
-    /* 입력창 내에 글 썼을 때 좌우 여유공간 주기 위한 padding 값 */
-    padding: 0 20px;
+    background-color: var(--white_background-color);
+    border: none;
+    /* 24px에 맞추고 싶어서 1.5로 하고 싶은데 그러면 input 공간이 너무 커짐 [???] */
+    font-size: 1.25rem;
+    /* padding과 margin값 임의로 적용 */
+    padding: 1em;
+    margin: 1em;
 }
-.my-resolution_wrapper input::placeholder{
+/* placeholder 글씨가 가운데로 안맞춰짐 [???]*/
+.resolution-p input::placeholder{
+    color: var(--input-placeholder_color);
+    font-weight: 400;
+    font-size: 1.5rem;
     text-align: center;
-    color: #BABCBE;
-    font-size: 24px;
 }
-.my-resolution_wrapper .click-btn{
+.resolution-div{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 115px;
 }
-.how-long_btn{
-    width: 565px;
-    height: 66px;
+.resolution-btn{
+    margin-right: 7px;
 }
-.my-resolution_wrapper .click-finger{
-   width: 64px;
-   height: 72px;
-   margin-left: 7px;
+/* 이런 클릭 이미지도 크기 자동 조절 위해 em 설정 */
+.resolution-click_img{
+    width: 4em;
+    height: 4.5em;
 }
-.result_wrapper{
-    margin-top: 147px;
+/* 공통되는 요소 같은 클래스로 묶어줌 */
+.yellow-bg-purple-font{
+    background-color: var(--yellow_background-color);
+    color: var(--purple_color);
+    font-family: var(--gmarketMedium_font-family);
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    padding: 21px 49px;
+    border: none;
 }
-.result_wrapper h2{
-    display: none;
+.resolution-click_img{
+    /* 눈대중으로 맞춤 [???] */
+    margin-top: 34px;
 }
-.result_wrapper .result-paragraph .first, .second{
-    font-family: 'GmarketSansMedium';
-    color: #FFFFFF;
-    text-align: center;
+.result-section{
+    margin-top: 135px;
+}
+.result-sentence{
+    color: var(--white_color);
+    font-family: var(--gmarketMedium_font-family);
+    font-size: 1.5rem;
     font-weight: 400;
-    font-size: 24px;
+}
+/* 공통되는 요소 같은 클래스로 묶어줌 */
+.result-big-span{
+    display: block;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* 임의로 값을 잡음 */
+    line-height: 1.5;
 }
-.result_wrapper .result-paragraph .first strong, .second strong{
-    font-weight: 700;
-    font-size: 72px;
+.result-big-span strong{
+    font-size: 4.5rem;
     margin: 0 12px;
+    font-weight: 700;
 }
-.result_wrapper .gogo-share_btn{
+.gogo-share_btn{
     margin-top: 127px;
-    display: flex;
-    justify-content: center;
 }
-.result_wrapper .gogo-share_btn .share{
+.share-btn{
+    font-family: var(--gmarketMedium_font-family);
+    font-size: 1.5rem;
+    color: var(--purple_color);
+    font-weight: 700;
+    padding: 21px 49px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 56px;
-    color: #5B2386;
-    font-family: 'Gmarket Sans';
-    font-weight: 700;
-    font-size: 24px;
     border: none;
-}
-.gogo{
-    width: 356px;
-    height: 66px;
-    margin-right: 18px;
-}
-.share{
-    width: 191px;
-    height: 66px;
-    background-color: #FFFFFF;
+    margin-left: 18px;
 }
 .footer{
     margin-top: 130px;
-    color: #FFFFFF;
-    font-family: 'Noto Sans Korean';
 }
-.weniv-logo{
-    width: 125px;
-    height: 25px;
+.footer img{
+    margin-bottom: 20px;
 }
-.footer p{
-    margin-top: 20px;
+.copyright-sentence{
+    /* line-height 임의로 잡음 */
+    line-height: 1.3rem;
+    color: var(--white_color);
+    font-family: var(--noto_font-family);
     font-weight: 400;
-    font-size: 12px;
 }
-.modal_wrapper{
-    /* 이부분 margin은 모달창 위 아래 공간 마련 위해 작성 => 이후 수정 예정*/
-    margin: 57px 0 94px;
+.modal-section{
+    margin-top: 57px;
     width: 800px;
     height: 800px;
-    background-color: #FFFFFF;
+    background-color: var(--white_background-color);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     border-radius: 30px;
+    padding: 4.75em;
 }
-.modal_wrapper{
-    padding-top: 76px;
+.modal-section span{
+    display: block;
+    color: var(--purple_color);
+    font-family: var(--enjoy_font-family);
 }
-.modal_wrapper h2{
-    display: none;
+.modal-section span:first-child{
+    font-size: 6rem;
 }
-.modal-fighting, .modal-support{
-    color: #5B2386;
-    font-family: 'OTEnjoystoriesBA';
-    font-weight: 700;
+.modal-section span:nth-child(2){
+    font-size: 2.25rem;
 }
-.modal-fighting{
-    font-size: 96px;
-}
-.modal-support{
-    font-size: 36px;
-}
-.support_img{
-    width: 433px;
-    height: 337px;
+.licat-img{
     margin-top: 29px;
 }
-.modal-end_btn{
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.modal-btn{
+    /* padding으로 위 아래 간격은 이미 주어져 있으니까 margin-top사용 안하고도 버튼을 제일 아래로 가게 하는 방법은? [???] */
     margin-top: 74px;
-    width: 508px;
-    height: 66px;
 }
