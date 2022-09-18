@@ -184,6 +184,7 @@ html{
     font-size: 1.5rem;
     color: var(--purple_color);
     font-weight: 700;
+    /* padding 값 똑같은데도 옆에 있는 훈련하러 가기 GOGO랑 크기가 다름 [???] */
     padding: 21px 49px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 56px;
