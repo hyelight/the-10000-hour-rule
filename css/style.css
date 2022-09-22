@@ -22,15 +22,14 @@ html{
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    /* 피그마에서 봤을 때 제일 위쪽이 125px로 값이 나와서 내용 전체를 묶은 container에 margin-top 사용 */
     margin-top: 125px;
 }
+
 /* header 시작 */
 .header{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* header에 정확한 px 값을 주고 header-title에서 width: 100% 부여 */
 }
 .header-clock{
     width: 261px;
@@ -43,12 +42,11 @@ html{
     /* 따로 height 값을 주지 않아도 112px 이었고, height: auto;를 줘도 112px이 됨 */
     height: auto;
 }
+
 /* main 시작 */
 .main{
-    /* 1만 시간의 법칙 header 영역과 떨어지게 하기 위함 */
     margin-top: 46px;
 }
-/* 아래 있는 resolution-section과 거리 벌리기 */
 .dfn-section{
     margin-bottom: 8rem;
 }
@@ -64,7 +62,6 @@ html{
     justify-content: center;
 }
 .quotes-img{
-    /* 1만 시간의 법칙 정의보다 13px 내려와 있음 */
     margin-top: 13px;
 }
 .dfn-10000hours{
@@ -76,7 +73,7 @@ html{
     font-weight: 400;
     /* line-height은 px로 하지 말기 */
     line-height: 1.7;
-    /* 이 부분 width 고정값이 아닌 유동적으로 하고 싶은데 어떻게? [???]*/
+    /* 이 부분 width 고정값이 아닌 유동적으로? [???]*/
     width: 380px;
     /* 텍스트가 추가될 경우 줄바꿈 되도록 하지만 현재 이게 없어도 줄바꿈은 가능*/
     overflow-wrap: break-word;
@@ -86,7 +83,7 @@ html{
     font-size: 24px;
     font-weight: 700;
 }
-/* .hidden을 사용하여 웹 접근성을 위해 clip-path를 이용하여 숨긴 것*/
+/* .hidden에 웹 접근성을 위해 clip-path를 이용하여 숨김*/
 /* 공통되는 곳 같은 클래스 사용 */
 .hidden{
     position: absolute;
@@ -102,26 +99,27 @@ html{
     font-family: var(--gmarketMedium_font-family);
     font-weight: 400;
     font-size: 24px;
-    /* 임의로 설정함 [???]*/
-    line-height: 3;
 }
 /* input 공통 요소 클래스 묶어줌 */
 .resolution-p input{
     border-radius: 7px;
     background-color: var(--white_background-color);
     border: none;
-    /* 24px에 맞추고 싶어서 1.5로 하고 싶은데 그러면 input 공간이 너무 커짐 [???] */
+    /* 24px에 맞추고 싶어서 1.5로 하고 싶지만 그러면 input 공간이 너무 커짐 [???] */
     font-size: 1.25rem;
-    /* padding과 margin값 임의로 적용 */
-    padding: 1em;
-    margin: 1em;
+    /* padding과 margin값 임의 적용 */
+    padding: 1rem;
+    margin: 1.68rem 0.5rem;
+    font-family: var(--gmarketMedium_font-family);
+
 }
-/* placeholder 글씨가 가운데로 안맞춰짐 [???]*/
+/* placeholder 글씨 가운데로 [???]*/
 .resolution-p input::placeholder{
     color: var(--input-placeholder_color);
     font-weight: 400;
     font-size: 1.5rem;
     text-align: center;
+    font-family: var(--gmarketMedium_font-family);
 }
 .resolution-div{
     display: flex;
@@ -132,10 +130,9 @@ html{
 .resolution-btn{
     margin-right: 7px;
 }
-/* 이런 클릭 이미지도 크기 자동 조절 위해 em 설정 */
 .resolution-click_img{
-    width: 4em;
-    height: 4.5em;
+    width: 4rem;
+    height: 4.5rem;
 }
 /* 공통되는 요소 같은 클래스로 묶어줌 */
 .yellow-bg-purple-font{
@@ -150,7 +147,6 @@ html{
     border: none;
 }
 .resolution-click_img{
-    /* 눈대중으로 맞춤 [???] */
     margin-top: 34px;
 }
 .result-section{
@@ -191,6 +187,8 @@ html{
     border: none;
     margin-left: 18px;
 }
+
+/* footer 시작 */
 .footer{
     margin-top: 130px;
 }
@@ -204,7 +202,10 @@ html{
     font-family: var(--noto_font-family);
     font-weight: 400;
 }
+
+/* 모달창 */
 .modal-section{
+    margin: 0 auto;
     margin-top: 57px;
     width: 800px;
     height: 800px;
@@ -228,6 +229,5 @@ html{
     margin-top: 29px;
 }
 .modal-btn{
-    /* padding으로 위 아래 간격은 이미 주어져 있으니까 margin-top사용 안하고도 버튼을 제일 아래로 가게 하는 방법은? [???] */
     margin-top: 74px;
 }
